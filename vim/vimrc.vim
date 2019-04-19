@@ -26,6 +26,7 @@
 	nnoremap L $
 	nnoremap J G
 	nnoremap K gg
+	inoremap ;; <ESC>
 
 	map <tab> %
 
