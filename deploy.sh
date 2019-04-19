@@ -96,5 +96,12 @@ printf "source '$HOME/dotfiles/zsh/zshrc_manager.sh'" > ~/.zshrc
 printf "so $HOME/dotfiles/vim/vimrc.vim" > ~/.vimrc
 printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
 
+echo "Adding vim plugins"
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
+git clone --depth=1 https://github.com/junegunn/fzf.vim.git ~/.vim/bundle/fzf
+git clone --depth=1 https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+git clone --depth=1 https://github.com/itchyny/lightline.vim.git ~/.vim//bundle/lightline
+
 echo
 echo "Please log out and log back in for default shell to be initialized."
