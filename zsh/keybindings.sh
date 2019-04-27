@@ -45,8 +45,8 @@
 		BUFFER="ls"
 		zle accept-line
 	}
-	zle -N ctrl_l
-	bindkey "^l" ctrl_l
+#	zle -N ctrl_l
+#	bindkey "^l" ctrl_l
 
 # Enter
 	function enter_line() {

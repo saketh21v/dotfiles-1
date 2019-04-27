@@ -7,6 +7,7 @@
 	git config --global push.default current
 
 # Aliases
+	alias vi="vim"
 	alias v="vim -p"
 	mkdir -p /tmp/log
 	
@@ -38,7 +39,9 @@ source ~/dotfiles/zsh/plugins/fixls.zsh
  		ls;
  	}
  	alias cd="c"
-
+	activate-env(){
+		source ./bin/activate
+	}
 # For vim mappings: 
 	stty -ixon
 
@@ -83,4 +86,8 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
 fi
 
 source ~/dotfiles/zsh/prompt.sh
+powerline-daemon -q 
+. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 export PATH=$PATH:$HOME/dotfiles/utils
+
+
